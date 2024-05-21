@@ -10,7 +10,7 @@ const App = () => {
   const [excelFileLink, setExcelFileLink] = useState('');
 
   useEffect(() => {
-    const eventSource = new EventSource('http://localhost:3001/api/folders/progress');
+    const eventSource = new EventSource('https://toplaintextbe.onrender.com/api/folders/progress');
 
     eventSource.onmessage = (event) => {
       const data = JSON.parse(event.data);
