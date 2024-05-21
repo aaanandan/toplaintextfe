@@ -35,7 +35,7 @@ const App = () => {
     setExcelFileLink('');
 
     try {
-      await axios.post('http://localhost:3001/api/folders', {
+      await axios.post('http://localhost:8080/api/folders', {
         inputDriveFolderID,
         outputDriveFolderID,
       });
@@ -84,7 +84,7 @@ const App = () => {
           <List>
             {progressLog.map((log, index) => (
               <ListItem key={index}>
-                <ListItemText primary={`Source: ${log.sourceFileName}, Destination: ${log.destinationFileName}, Link: ${log.destinationLink}`} />
+                <ListItemText primary={`Source: ${log.sourceFileName} , Destination: ${log.destinationFileName}`} />
               </ListItem>
             ))}
           </List>
