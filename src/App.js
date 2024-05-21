@@ -35,7 +35,7 @@ const App = () => {
     setExcelFileLink('');
 
     try {
-      await axios.post('https://ftoplaintextbe.onrender.com/api/folders', {
+      await axios.post('https://toplaintextbe.onrender.com/api/folders', {
         inputDriveFolderID,
         outputDriveFolderID,
       });
